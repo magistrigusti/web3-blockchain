@@ -3,7 +3,7 @@ const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
 
 module.exports = buildModule("itModule", (m) => {
   const initialSupply = m.getParameter("initialSupply", 1000000000);
-  const myToken = m.contract("itContract", [initialSupply]);
+  const myToken = m.contract("Joker", [initialSupply]);
 
   return { myToken };
 });
@@ -18,3 +18,5 @@ module.exports = buildModule("itModule", (m) => {
 //console.log(balance.toString());
 //const [_, recipient] = await ethers.getSigners();
 //await myToken.transfer(recipient.address, 500);
+//let newBalance = await myToken.balanceOf(recipient.address);
+//console.log(newBalance.toString());
